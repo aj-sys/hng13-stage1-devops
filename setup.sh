@@ -1,4 +1,6 @@
 #!/bin/bash
+LOGFILE="deploy_$(date +%Y%m%d).log"
+exec > >(tee -a "$LOGFILE") 2>&1
 
 echo "🚀 Starting Automated Deployment Script..."
 
@@ -16,6 +18,12 @@ read -p "Enter Application Port (container port): " APP_PORT
 if [ -z "$REPO_URL" ] || [ -z "$SSH_USER" ] || [ -z "$SERVER_IP" ]; then
   echo "❌ Missing required fields. Exiting..."
   exit 1
+fi
+# Optional cleanup flag
+if [ "$1" == "--cleanup" ]; then
+  echo "🧹 Cleaning up..."
+  ssh -i "$SSH_KEY" "$SSH_USER@$SERVER_IP" "sudo docker stop \$(sudo docker ps -q) && sudo docker rm \$(sudo docker ps -aq)"
+  exit 0
 fi
 
 
