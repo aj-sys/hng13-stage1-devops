@@ -1,0 +1,187 @@
+🚀 Starting Automated Deployment Script...
+Enter Git Repository URL: Enter your Personal Access Token: Enter Branch name (default: main): Enter SSH Username: Enter Server IP Address: Enter SSH Key Path (e.g., ~/.ssh/id_rsa): Enter Application Port (container port): 📥 Cloning repository...
+From https://github.com/aj-sys/hng13-stage1-devops
+ * branch            main       -> FETCH_HEAD
+   130b71f..147930d  main       -> origin/main
+Updating 130b71f..147930d
+Fast-forward
+ setup.sh | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 45 insertions(+)
+📤 Copying project to remote server...
+Warning: Identity file "C:UsersAJARADownloads" not accessible: No such file or directory.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+scp: Connection closed
+🐳 Deploying Dockerized application...
+Warning: Identity file "C:UsersAJARADownloads" not accessible: No such file or directory.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+🌐 Configuring NGINX...
+Warning: Identity file "C:UsersAJARADownloads" not accessible: No such file or directory.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+✅ Validating deployment...
+Warning: Identity file "C:UsersAJARADownloads" not accessible: No such file or directory.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+Deployment complete! Access your app at: http://54.164.134.155/
+🚀 Starting Automated Deployment Script...
+Enter Git Repository URL: Enter your Personal Access Token (PAT): Enter Branch name (default: main): Enter SSH Username: Enter Server IP Address: Enter SSH Key Path (e.g., ~/.ssh/id_rsa): Enter Application Port (container port): 📥 Cloning repository...
+From https://github.com/aj-sys/hng13-stage1-devops
+ * branch            main       -> FETCH_HEAD
+   147930d..828076a  main       -> origin/main
+Updating 147930d..828076a
+Fast-forward
+ setup.sh | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+🔌 Connecting to remote server and preparing environment...
+Warning: Identity file "C:UsersAJARADownloads" not accessible: No such file or directory.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+❌ An error occurred. Exiting...
+🚀 Starting Automated Deployment Script...
+Enter Git Repository URL: Enter your Personal Access Token (PAT): Enter Branch name (default: main): Enter SSH Username: Enter Server IP Address: Enter SSH Key Path (e.g., ~/.ssh/id_rsa): Enter Application Port (container port): ❌ Missing required fields. Exiting...
+🚀 Starting Automated Deployment Script...
+Enter Git Repository URL: Enter your Personal Access Token (PAT): Enter Branch name (default: main): Enter SSH Username: Enter Server IP Address: Enter SSH Key Path (e.g., ~/.ssh/id_rsa): Enter Application Port (container port): 📥 Cloning repository...
+From https://github.com/aj-sys/hng13-stage1-devops
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🔌 Connecting to remote server and preparing environment...
+Warning: Identity file "C:UsersAJARADownloadsmykey1.pem" not accessible: No such file or directory.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ec2-user@54.164.134.155: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+❌ An error occurred. Exiting...
+🚀 Starting Automated Deployment Script...
+Enter Git Repository URL: Enter your Personal Access Token (PAT): Enter Branch name (default: main): Enter SSH Username: Enter Server IP Address: Enter SSH Key Path (e.g., ~/.ssh/id_rsa): Enter Application Port (container port): 📥 Cloning repository...
+From https://github.com/aj-sys/hng13-stage1-devops
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+🔌 Connecting to remote server and preparing environment...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last metadata expiration check: 1:17:58 ago on Tue Oct 21 10:12:22 2025.
+Dependencies resolved.
+Nothing to do.
+Complete!
+📁 Copying project files to remote server...
+🐳 Deploying Dockerized application...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2B done
+#1 DONE 0.0s
+WARNING: current commit information was not captured by the build: git was not found in the system: exec: "git": executable file not found in $PATH
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+Unable to find image 'myapp:latest' locally
+docker: Error response from daemon: pull access denied for myapp, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+❌ An error occurred. Exiting...
+🚀 Starting Deployment Script...
+📥 Cloning repository...
+From https://github.com/aj-sys/hng13-stage1-devops
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+📤 Copying project to remote server...
+scp: dest open "/home/ec2-user/app/.git/objects/14/7930d32f5df39027c3ef4a67a93b2db8e29dfb": Permission denied
+scp: upload "./.git/objects/14/7930d32f5df39027c3ef4a67a93b2db8e29dfb" to "/home/ec2-user/app/.git/objects/14/7930d32f5df39027c3ef4a67a93b2db8e29dfb" failed
+scp: dest open "/home/ec2-user/app/.git/objects/55/e5769354ca99d5f0038e702779c87fd077959d": Permission denied
+scp: upload "./.git/objects/55/e5769354ca99d5f0038e702779c87fd077959d" to "/home/ec2-user/app/.git/objects/55/e5769354ca99d5f0038e702779c87fd077959d" failed
+scp: dest open "/home/ec2-user/app/.git/objects/75/66b0ae3f8590366e9db2455c5556b23bad555a": Permission denied
+scp: upload "./.git/objects/75/66b0ae3f8590366e9db2455c5556b23bad555a" to "/home/ec2-user/app/.git/objects/75/66b0ae3f8590366e9db2455c5556b23bad555a" failed
+scp: dest open "/home/ec2-user/app/.git/objects/82/8076a2062e68446fa750665eddef8baa1ee826": Permission denied
+scp: upload "./.git/objects/82/8076a2062e68446fa750665eddef8baa1ee826" to "/home/ec2-user/app/.git/objects/82/8076a2062e68446fa750665eddef8baa1ee826" failed
+scp: dest open "/home/ec2-user/app/.git/objects/ac/897bd4e2fc28a0ee891a3583af71704e35e403": Permission denied
+scp: upload "./.git/objects/ac/897bd4e2fc28a0ee891a3583af71704e35e403" to "/home/ec2-user/app/.git/objects/ac/897bd4e2fc28a0ee891a3583af71704e35e403" failed
+scp: dest open "/home/ec2-user/app/.git/objects/d8/0060430e36c725d9bdb3d45a3caeb498ef3345": Permission denied
+scp: upload "./.git/objects/d8/0060430e36c725d9bdb3d45a3caeb498ef3345" to "/home/ec2-user/app/.git/objects/d8/0060430e36c725d9bdb3d45a3caeb498ef3345" failed
+scp: dest open "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.idx": Permission denied
+scp: upload "./.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.idx" to "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.idx" failed
+scp: dest open "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.pack": Permission denied
+scp: upload "./.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.pack" to "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.pack" failed
+scp: dest open "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.rev": Permission denied
+scp: upload "./.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.rev" to "/home/ec2-user/app/.git/objects/pack/pack-cc224bb06df793c311cd4cb18bd5083847506305.rev" failed
+scp: failed to upload directory . to /home/ec2-user/app
+🐳 Deploying Dockerized application...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2B done
+#1 DONE 0.0s
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+Unable to find image 'myapp:latest' locally
+docker: Error response from daemon: pull access denied for myapp, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+🌐 Configuring Nginx...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+bash: line 1: /etc/nginx/sites-available/myapp: No such file or directory
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+✅ Validating deployment...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+     Active: active (running) since Tue 2025-10-21 10:15:44 UTC; 1h 58min ago
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+HTTP/1.1 200 OK
+Server: nginx/1.28.0
+Date: Tue, 21 Oct 2025 12:14:43 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Tue, 12 Aug 2025 21:19:59 GMT
+Connection: keep-alive
+ETag: "689bafff-267"
+Accept-Ranges: bytes
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   615    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+🎉 Deployment complete! Access your app at http://54.164.134.155/
