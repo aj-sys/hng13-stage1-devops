@@ -27,3 +27,48 @@ else
   cd repo
   git checkout $BRANCH
 fi
+
+# --- Step 3: Copy project to remote server ---
+echo "📤 Copying project to remote server..."
+scp -i "$SSH_KEY" -r . "$SSH_USER@$SERVER_IP:/home/$SSH_USER/app"
+
+# --- Step 4: Deploy Dockerized application remotely ---
+echo "🐳 Deploying Dockerized application..."
+ssh -i "$SSH_KEY" "$SSH_USER@$SERVER_IP" <<EOF
+cd /home/$SSH_USER/app
+
+if [ -f docker-compose.yml ]; then
+  sudo docker-compose up -d --build
+else
+  sudo docker build -t myapp .
+  sudo docker run -d -p $APP_PORT:$APP_PORT myapp
+fi
+EOF
+
+# --- Step 5: Configure NGINX as reverse proxy ---
+echo "🌐 Configuring NGINX..."
+ssh -i "$SSH_KEY" "$SSH_USER@$SERVER_IP" <<EOF
+sudo bash -c 'cat > /etc/nginx/sites-available/myapp <<EOL
+server {
+    listen 80;
+    server_name _;
+    location / {
+        proxy_pass http://127.0.0.1:$APP_PORT;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+    }
+}
+EOL'
+sudo ln -sf /etc/nginx/sites-available/myapp /etc/nginx/sites-enabled/
+sudo nginx -t && sudo systemctl reload nginx
+EOF
+
+# --- Step 6: Validate deployment ---
+echo "✅ Validating deployment..."
+ssh -i "$SSH_KEY" "$SSH_USER@$SERVER_IP" <<EOF
+sudo systemctl status docker | grep active
+sudo docker ps
+curl -I http://localhost
+EOF
+
+echo "Deployment complete! Access your app at: http://$SERVER_IP/"
